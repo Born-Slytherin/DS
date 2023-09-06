@@ -57,16 +57,12 @@ public:
         }
     }
 
-    int getSize() {
-        return size;
-    }
 };
 
 int main() {
     Array A;
     A.create();
-
-    int size = A.getSize();
+    
     cout << "\nArray before sorting:\n";
     A.display();
     A.selection();
