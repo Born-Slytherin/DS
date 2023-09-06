@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#define MAX 5
+#define MAX  5
 
 class Matrix
 {
@@ -19,10 +19,10 @@ public:
             cout << "\nEnter the order of matrix : ";
             cin >> r >> c;
 
-            if ((r < 1 || r > 10) || (c < 1 || c > 10))
+            if ((r < 1 || r > 5) || (c < 1 || c > 5))
             {
 
-                cout << "\n\nRow and Column of the matrix should be from 1 to "<<MAX<<" !....Re-Try\n";
+                cout << "\n\nInvalid order...Try again!\n";
             }
             else
             {
