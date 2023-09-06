@@ -13,9 +13,13 @@ public:
 
         while (true)
         {
-            cout << "Enter the size of row,column, and non zero elements  : ";
-            cin >> r >> c >> nz;
-
+            cout << "Enter row size : ";
+            cin>>r;
+            cout<<"Enter column size :";
+            cin>>c;
+            cout<<"Enter number of non zero elements :";
+            cin >>nz;
+            cout<<endl<<endl;
             if ((r < 1 || r > MAX) || (c < 1 || c > MAX) || (nz < 1 || nz >= ((r * c) / 2)))
             {
                 cout << "\nInvalid values......Re-Enter!" << endl;
@@ -34,9 +38,13 @@ public:
         for (int i = 0; i < nz; i++)
         {
             int R, C, NZN;
-            cout << "Enter the row , column, and element: ";
-            cin >> R >> C >> NZN;
-
+            cout << "Enter the row  number : ";
+            cin >> R;
+            cout<<"Enter the column number : ";
+            cin>> C;
+            cout<<"Enter the non zero element : " ;
+            cin>> NZN;
+            cout<<endl<<endl;
             if ((R < 0 || R >= r) || (C < 0 || C >= c) || (NZN ==0))
             {
                 cout << "\nInvalid values......Re-Enter!" << endl;
@@ -54,8 +62,7 @@ public:
 
     void DisplayM()
     {
-        cout << endl
-             << "Sparse Matrix is :-" << endl;
+        cout << endl;
         int r = s[0][0];
         int c = s[0][1];
         int nz = s[0][2];
@@ -214,7 +221,7 @@ int main()
 
     cout << endl
          << endl
-         << ".........Sum........." << endl;
+         << ".........Sum..........." << endl;
     sum.DisplayM();
 
     return 0;
