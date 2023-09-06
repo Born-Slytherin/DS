@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 #define MAX 5
+#define SMAX 12
 
 class sparseMatrix
 {
-    int s[MAX][3];
+    int s[SMAX][3];
 
 public:
     void ReadM()
@@ -63,8 +64,6 @@ public:
     void DisplayM()
     {
         cout << endl;
-        int r = s[0][0];
-        int c = s[0][1];
         int nz = s[0][2];
 
         for (int i = 0; i <= nz; i++)
@@ -80,7 +79,7 @@ public:
     sparseMatrix AddM(sparseMatrix &o)
     {
 
-        if ((s[0][0] != o.s[0][0]) && s[0][1] != o.s[0][1])
+        if ((s[0][0] != o.s[0][0]) || s[0][1] != o.s[0][1])
         {
             cout << endl
                  << "Matrix addition not possible order of both matrix is not same!";
